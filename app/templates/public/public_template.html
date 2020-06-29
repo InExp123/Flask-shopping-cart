@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{%block title%}{%endblock%}</title>
+    <meta name="description" content="This is the description">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <header class="main-header"
+        style="background-image: url('static/Images/Header Background.jpg')">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/store">STORE</a></li>
+                <li><a href="/about">ABOUT</a></li>
+            </ul>
+        </nav>
+        <h1 class="band-name band-name-large">The Generics</h1>
+        {%block header%}{%endblock%}
+    </header>
+    <section class="content-section container">
+        {%block section%}{%endblock%}
+
+    </section>
+
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <h3 class="band-name">The Generics</h3>
+            <ul class="nav footer-nav">
+                <li>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="{{url_for('static',filename='Images/Youtube Logo.png')}}" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.spotify.com" target="_blank">
+                        <img src="{{url_for('static',filename='Images/Spotify Logo.png')}}" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="{{url_for('static',filename='Images/Facebook Logo.png')}}" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/store.js')}}"></script>
+</body>
+
+</html>
